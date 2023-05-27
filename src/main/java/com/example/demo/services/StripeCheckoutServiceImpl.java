@@ -14,7 +14,7 @@ public class StripeCheckoutServiceImpl implements StripeCheckoutService {
     @Value("${stripe.apiKey}")
     private String stripeApiKey;
     
-    @Value("${REACT_ADDRESS}")
+    @Value("${react.address}")
     private String YOUR_DOMAIN;
 
     @Override
