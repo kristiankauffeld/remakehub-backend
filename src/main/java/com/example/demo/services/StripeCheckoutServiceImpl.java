@@ -34,8 +34,8 @@ public class StripeCheckoutServiceImpl implements StripeCheckoutService {
         SessionCreateParams params =
                 SessionCreateParams.builder()
                         .setMode(SessionCreateParams.Mode.PAYMENT)
-                        .setSuccessUrl(YOUR_DOMAIN + "/")
-                        .setCancelUrl(YOUR_DOMAIN + "/")
+                        .setSuccessUrl(YOUR_DOMAIN + "/success")
+                        .setCancelUrl(YOUR_DOMAIN + "/canceled")
                         .addAllLineItem(lineItems) // Add all the line items to the session
                         .build();
 
