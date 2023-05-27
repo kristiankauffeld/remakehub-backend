@@ -13,12 +13,13 @@ import java.util.List;
 public class StripeCheckoutServiceImpl implements StripeCheckoutService {
     @Value("${stripe.apiKey}")
     private String stripeApiKey;
+    
+    @Value("${REACT_ADDRESS}")
+    private String YOUR_DOMAIN;
 
     @Override
     public Session createCheckoutSession(Collection<Product> cartItems) throws Exception {
         Stripe.apiKey = stripeApiKey;
-
-        String YOUR_DOMAIN = "http://localhost:5173";
 
         // Create line items from cart items
         List<SessionCreateParams.LineItem> lineItems = new ArrayList<>();
